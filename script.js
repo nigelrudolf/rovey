@@ -35,18 +35,19 @@ function create () {
     const map = this.make.tilemap({key: 'map'});
     const tileset = map.addTilesetImage('mars-surface-tiles', 'tiles');
     
-
     // layers
     const botLayer = map.createStaticLayer('bot', tileset,0,0);
     const topLayer = map.createStaticLayer('top', tileset,0,0);
 
     topLayer.setCollisionByProperty({ collides: true });
 
+    // Starting location of Curiosity
     player = this.physics.add
         .sprite(350,350, 'atlas');
  
     this.physics.add.collider(player, topLayer);
-
+    player.body.collideWorldBounds=true;
+    
 const anims = this.anims;
 anims.create({
     key: "curiosity-left-drive",
