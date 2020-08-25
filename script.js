@@ -2,13 +2,13 @@
 
 const config = {
     type: Phaser.AUTO,
-    width: 400,
-    height: 400,
+    width: 500,
+    height: 500,
     physics: {
         default: 'arcade',
         arcade: {
             gravity: {y: 0},
-            
+
         }
     },
     scene: {
