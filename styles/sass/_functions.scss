@@ -1,0 +1,29 @@
+// Function to access colors
+@function color($color) {
+    $choice: map-get($colors, $color);
+    @return $choice;
+}
+
+// Function to access fonts
+@function font($font-family) {
+    $choice: map-get($fonts, $font-family);
+    @return $choice;
+}
+
+// Function to access font-weights
+@function weight($font-weight) {
+    $choice: map-get($font-weights, $font-weight);
+    @return $choice;
+}
+
+// function to access font-style
+@function style($font-style) {
+    $choice: map-get($font-styles, $font-style);
+    @return $choice;
+}
+
+// Function to access font-sizes
+@function size($font-size) {
+    $choice: map-get($font-sizes, $font-size);
+    @return $choice;
+}

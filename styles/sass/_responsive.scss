@@ -1,0 +1,77 @@
+// ==================================================
+// $Variables
+// ==================================================
+// Supports 
+// @media min-width
+// @media max-width
+// @media min-width and max-width
+
+$viewport-increment: 0.1px; // customize to suite
+
+
+
+// Desktop
+$desktop: 1440px; // customize to suite
+$pre-desktop: $desktop - $viewport-increment;
+$post-desktop: $desktop + $viewport-increment;
+
+// Tablet
+$tablet: 768px; // customize to suite
+$pre-tablet: $tablet - $viewport-increment;
+
+// Palm
+$palm: 640px; // customize to suite
+$post-palm: $palm + $viewport-increment;
+
+// Constraints
+$min: min-width;
+$max: max-width;
+
+
+// ==================================================
+// $Media Query @Mixin
+// ==================================================
+
+@mixin mediaQuery($constraint, $viewport1, $viewport2: null) {
+
+  @if $constraint == $min {
+
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+
+  } @else if $constraint == $max {
+
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+
+  } @else {
+
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+
+  }
+
+}
+
+//==================================================
+// The Implementation!
+// ==================================================
+
+@include mediaQuery($max, $palm) {
+
+} // END OF MAX PALM MEDIA QUERY
+
+@include mediaQuery($min, $palm) {
+
+} // END OF MIN PALM MEDIA QUERY
+
+@include mediaQuery($min, $tablet) {
+
+} // END OF MIN TABLET MEDIA QUERY
+
+@include mediaQuery($min, $post-desktop) {
+
+} // END OF MIN POST-DESKTOP MEDIA QUERY

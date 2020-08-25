@@ -1,0 +1,76 @@
+{
+	"frames": {
+		"curiosity-back-drive.000": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			},
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			}
+		},
+		"curiosity-back-drive.001": {
+			"rotated": false,
+			"trimmed": false,
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			},
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			},
+			"frame": {
+				"x": 51,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			}
+		},
+		"curiosity-back-drive.002": {
+			"frame": {
+				"x": 101,
+				"y": 1,
+				"w": 48,
+				"h": 48
+			},
+			"rotated": false,
+			"trimmed": false,
+			"sourceSize": {
+				"w": 48,
+				"h": 48
+			},
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 48
+			}
+		}
+	},
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"image": "atlas.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 150,
+			"h": 50
+		},
+		"scale": 1,
+		"smartupdate": "$TexturePacker:SmartUpdate:9530fc4aaaa628a69bd1e6db347a326c:81f7af523aff777a2955ac66cafca4e5:cbce6b53f0f49e0bf15173c25c41f876$"
+	}
+}
