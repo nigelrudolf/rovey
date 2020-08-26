@@ -2,8 +2,10 @@
 
 const config = {
     type: Phaser.AUTO,
-    width: 400,
-    height: 400,
+    width: 800,
+    height: 800,
+    pixelArt: true,
+    parent: 'game-container',
     physics: {
         default: 'arcade',
         arcade: {
@@ -43,10 +45,9 @@ function create () {
 
     // Starting location of Curiosity
     player = this.physics.add
-        .sprite(350,350, 'atlas');
+        .sprite(1200,900, 'atlas');
  
-    this.physics.add.collider(player, topLayer);
-    player.body.collideWorldBounds=true;
+    this.physics.add.collider(player, topLayer);    
     
 const anims = this.anims;
 anims.create({
@@ -94,11 +95,9 @@ anims.create({
     repeat: -1
   });
 
-
   const camera = this.cameras.main;
   camera.startFollow(player);
   camera.setBounds(0, 0, map.widthInPixels, map.heightInPixels);
-
     
     // arrow keys
     cursors = this.input.keyboard.createCursorKeys();
@@ -123,7 +122,7 @@ anims.create({
 
 function update () {
     
-    const speed = 50;
+    const speed = 500;
     const prevVelocity = player.body.velocity.clone();
 
   // Stop any previous movement from the last frame
