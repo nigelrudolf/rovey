@@ -122,7 +122,7 @@ anims.create({
 
 function update () {
     
-    const speed = 500;
+    const speed = 50;
     const prevVelocity = player.body.velocity.clone();
 
   // Stop any previous movement from the last frame
@@ -148,13 +148,13 @@ function update () {
 
     // Update the animation last and give left/right animations precedence over up/down animations
     if (cursors.left.isDown) {
-        player.anims.play("curiosity-back-drive", true);
+        player.anims.play("curiosity-left-drive", true);
       } else if (cursors.right.isDown) {
-        player.anims.play("curiosity-back-drive", true);
+        player.anims.play("curiosity-right-drive", true);
       } else if (cursors.up.isDown) {
         player.anims.play("curiosity-back-drive", true);
       } else if (cursors.down.isDown) {
-        player.anims.play("curiosity-back-drive", true);
+        player.anims.play("curiosity-front-drive", true);
       } else {
         player.anims.stop();
 
