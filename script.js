@@ -10,7 +10,6 @@ const config = {
         default: 'arcade',
         arcade: {
             gravity: {y: 0},
-
         }
     },
     scene: {
@@ -24,7 +23,7 @@ const game = new Phaser.Game(config);
 let cursors;
 let player;
 
-function preload () {
+function preload() {
     
     this.load.image('tiles', 'assets/mars-surface-tiles.png');   
     this.load.tilemapTiledJSON('map', 'assets/mars-surface.json');
@@ -32,7 +31,7 @@ function preload () {
     this.load.atlas("atlas", "assets/atlas.png", "assets/atlas.json");
 }
 
-function create () {
+function create() {
     // tiles, terrain
     const map = this.make.tilemap({key: 'map'});
     const tileset = map.addTilesetImage('mars-surface-tiles', 'tiles');
@@ -120,7 +119,7 @@ anims.create({
   });
 }
 
-function update () {
+function update() {
     
     const speed = 50;
     const prevVelocity = player.body.velocity.clone();
